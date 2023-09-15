@@ -2,7 +2,7 @@
 
 This documentation provides an overview of the API for managing person records using the Go programming language and the Gin web framework. The API allows you to perform basic CRUD (Create, Read, Update, Delete) operations on person records stored in a MongoDB database.
 
-A documentation on postman is also included here [LINK](https://documenter.getpostman.com/view/13294932/2s9YC5xs8U) 
+A documentation on postman is also included here [LINK](https://documenter.getpostman.com/view/20087483/2s9YC7RWQg) 
 
 ## Endpoints
 
