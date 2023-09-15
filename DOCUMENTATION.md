@@ -41,7 +41,7 @@ A documentation on postman is also included here [LINK](https://documenter.getpo
   - **Status Code: 500 (Internal Server Error)**
     ```json
     {
-        "error": "an error occured",
+        "error": "Internal serval error",
         "status": "error"
     }
     ```
