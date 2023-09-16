@@ -88,3 +88,7 @@ func (PersonControllerPointer *PersonController) UpdateUser(ctx *gin.Context) {
 
 	ctx.IndentedJSON(http.StatusOK, gin.H{"status": "success", "message": "Person updated successfully"})
 }
+
+func (PersonControllerPointer *PersonController) CronJ(ctx *gin.Context) {
+	ctx.IndentedJSON(http.StatusOK, gin.H{"message": "server woke up", "status": "success"})
+}

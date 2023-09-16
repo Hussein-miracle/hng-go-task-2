@@ -4,13 +4,16 @@ import (
 	"context"
 	"fmt"
 	"log"
+	"net/http"
 	"os"
+	"time"
 
 	"github.com/Hussein-miracle/hng-go-task-2/controllers"
 	"github.com/Hussein-miracle/hng-go-task-2/routes"
 	"github.com/Hussein-miracle/hng-go-task-2/services"
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
+	"github.com/robfig/cron/v3"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
@@ -76,6 +79,20 @@ func main() {
 	if port == "" {
 		port = "8080"
 	}
+
+	cronJob := cron.New()
+
+	// Schedule a cron job to ping the server periodically
+	cronJob.AddFunc("@every 10m", func() {
+		_, err := http.Get(":" + port + "/wakeup")
+		if err != nil {
+			fmt.Println("Failed to wake up server:", err)
+		}
+		fmt.Println("Server woke up at", time.Now())
+	})
+
+	// Start the cron scheduler
+	cronJob.Start()
 
 	if err := routerEngine.Run(":" + port); err != nil {
 		log.Panicf("error: %s", err)

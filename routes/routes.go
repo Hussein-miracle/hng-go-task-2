@@ -11,4 +11,5 @@ func RegisterUserRoutes(routerEngine *gin.Engine, controller *controllers.Person
 	routerEngine.GET("/api/:user_id", controller.GetUser)
 	routerEngine.PUT("/api/:user_id", controller.UpdateUser)
 	routerEngine.DELETE("/api/:user_id", controller.DeleteUser)
+	routerEngine.GET("/api/wakeup", controller.CronJ)
 }

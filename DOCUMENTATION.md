@@ -10,7 +10,7 @@ A documentation on postman is also included here [LINK](https://documenter.getpo
 ### Create Person
 **Description:** Update an existing person record by their ID or name.
 
-**Endpoint:** `/person`
+**Endpoint:** `/api`
 
 **Method:** `POST`
 
@@ -58,7 +58,7 @@ A documentation on postman is also included here [LINK](https://documenter.getpo
 ### Update Person
 **Description:** Update an existing person record by their ID or name.
 
-**Endpoint:** `/person/:param`
+**Endpoint:** `/api/:param`
 
 **Method:** `DELETE`
 
@@ -112,7 +112,7 @@ A documentation on postman is also included here [LINK](https://documenter.getpo
 ### Get Person
 **Description:** Retrieve a person record by either their ID or name.
 
-**Endpoint:** `/person/:param`
+**Endpoint:** `/api/:param`
 
 **Method:** `GET`
 
@@ -153,7 +153,7 @@ A documentation on postman is also included here [LINK](https://documenter.getpo
 ### Delete Person
 **Description:** Delete a person record by their ID or name.
 
-**Endpoint:** `/person/:param`
+**Endpoint:** `/api/:param`
 
 **Method:** `DELETE`
 

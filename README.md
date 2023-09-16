@@ -62,10 +62,10 @@ To run the API, follow these steps:
 ## API Endpoints
 The API provides the following endpoints:
 
-* `GET /person/:param`: Retrieve a person record by ID or name.
-* `POST /person`: Create a new person record.
-* `PUT /person/:param`: Update an existing person record by ID or name.
-* `DELETE /person/:param`: Delete a person record by ID or name.
+* `GET /api/:param`: Retrieve a person record by ID or name.
+* `POST /api/`: Create a new person record.
+* `PUT /api/:param`: Update an existing person record by ID or name.
+* `DELETE /api/:param`: Delete a person record by ID or name.
 
 For detailed information on each endpoint, refer to the [API Documentation](https://github.com/Hussein-miracle/hng-go-task-2/blob/master/DOCUMENTATION.md).
 
